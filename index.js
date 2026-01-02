@@ -19,3 +19,27 @@
 
 // [[0, 1], [2, 1]]
 // Where [0, 1] are the indices for the "c" (start of the word), and [2, 1] are the indices for the "t" (end of the word).
+
+function findWord(matrix, word) {
+  console.log(matrix, word);
+
+  // Ways the word can show up
+  // 1. left to right
+  //for (let row = 0; row < matrix.length; row++) {
+  //  for (let col = 0; col < matrix[row].length; col++) {
+  //    console.log(matrix[row][col])
+  //  }
+  // }
+
+  // 2. right to left
+  for (let row = matrix.length; row >= 0; row--) {
+    for (let col = matrix[row].length; col >= 0; col--) {
+      console.log(matrix[row][col]);
+    }
+  }
+  // 3. top to bottom
+  // for ()
+  // 4. bottom to top
+
+  //return matrix;
+}
