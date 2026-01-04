@@ -23,6 +23,31 @@
 function findWord(matrix, word) {
   console.log(matrix, word);
 
+  const directions = [
+    [0, 1], // right
+    [0, -1], // left
+    [1, 0], // down
+    [-1, 0], // up
+  ];
+
+  // 1. loop through every cell (r,c) in the matrix
+  for (let r = 0; r < matrix.length; r++) {
+    for (let c = 0; c < matrix[0].length; c++) {
+      if (matrix[r][c] === word[wordCounter]) {
+        wordCounter++;
+        // test all directions
+        if (matrix[r][c + 1] === word[wordCounter]) {
+        }
+      }
+    }
+  }
+
+  // 2. if (matrix[r][c] === word[0])
+  // // test all directions
+  // // for each direction, check if subsequent letters match word[1], word[2] etc by adding the direction values to your current (r,c)
+
+  // 3. if you reach the end of the word, you've found your start and end indicies
+
   // Ways the word can show up
   // 1. left to right
   //for (let row = 0; row < matrix.length; row++) {
@@ -46,11 +71,11 @@ function findWord(matrix, word) {
   // }
 
   // 4. bottom to top
-  for (let col = matrix[0].length - 1; col >= 0; col--) {
-    for (let row = matrix.length - 1; row >= 0; row--) {
-      console.log(matrix[row][col]);
-    }
-  }
+  // for (let col = matrix[0].length - 1; col >= 0; col--) {
+  //  for (let row = matrix.length - 1; row >= 0; row--) {
+  //    console.log(matrix[row][col]);
+  //  }
+  // }
 
   //return matrix;
 }
