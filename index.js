@@ -32,14 +32,25 @@ function findWord(matrix, word) {
   // }
 
   // 2. right to left
-  for (let row = matrix.length; row >= 0; row--) {
-    for (let col = matrix[row].length; col >= 0; col--) {
+  // for (let row = matrix.length -1; row >= 0; row--) {
+  //  for (let col = matrix[row].length -1; col >= 0; col--) {
+  //    console.log(matrix[row][col])
+  //  }
+  // }
+
+  // 3. top to bottom
+  // for (let col = 0; col < matrix[0].length; col++) {
+  //   for (let row = 0; row < matrix.length; row++) {
+  //     console.log(matrix[row][col])
+  //   }
+  // }
+
+  // 4. bottom to top
+  for (let col = matrix[0].length - 1; col >= 0; col--) {
+    for (let row = matrix.length - 1; row >= 0; row--) {
       console.log(matrix[row][col]);
     }
   }
-  // 3. top to bottom
-  // for ()
-  // 4. bottom to top
 
   //return matrix;
 }
